@@ -11,7 +11,41 @@ import interfaces.Manageble;
  *
  * @author Christian
  */
-public class Fornecedores implements Manageble{
+public class Fornecedores implements Manageble {
+
+    private String nome, razaoSocial, cnpj, email;
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getRazaoSocial() {
+        return razaoSocial;
+    }
+
+    public void setRazaoSocial(String razaoSocial) {
+        this.razaoSocial = razaoSocial;
+    }
+
+    public String getCnpj() {
+        return cnpj;
+    }
+
+    public void setCnpj(String cnpj) {
+        this.cnpj = cnpj;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
     @Override
     public void Create(Object data) {
@@ -32,5 +66,5 @@ public class Fornecedores implements Manageble{
     public void Delete(Object query) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
 }

@@ -1,6 +1,6 @@
 <%-- 
-    Document   : home
-    Created on : 29/03/2019, 07:31:37
+    Document   : pesquisarFornecedor
+    Created on : 29/03/2019, 15:15:10
     Author     : vsreis
 --%>
 
@@ -9,11 +9,11 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Home</title>
+        <title>JSP Page</title>
     </head>
     <body>
         <%@include file="WEB-INF/jspf/header.jspf" %>
-        <h1>Home</h1>
+        <h1>Pesquisar Fornecedor</h1>
         <%@include file="WEB-INF/jspf/menu.jspf" %>
         <br>
 

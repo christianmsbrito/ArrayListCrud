@@ -1,8 +1,9 @@
 <%@ page pageEncoding="UTF-8" %>
 
 <hr/>
-<a href="home.jsp">Home</a> ||
-<a href="....jsp">???</a> ||
-<a href="....jsp">???</a> ||
-<a href="....jsp">???</a> ||
+    <a href="home.jsp">Home</a> ||
+    <a href="formularioCliente.jsp">Cadastrar Cliente</a> ||
+    <a href="formularioFornecedor.jsp">Cadastrar</a> ||
+    <a href="pesquisaCliente.jsp">Pesquisar Cliente</a> ||
+    <a href="pesquisaFornecedor.jsp">Pesquisar Fornecedor</a> ||
 <hr/>

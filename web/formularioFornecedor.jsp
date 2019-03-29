@@ -17,7 +17,16 @@
         <%@include file="WEB-INF/jspf/menu.jspf" %>
         <br>
 
-        <h1>Hello World!</h1>
+        <form>
+            Nome: <input type="text" name="nome"> <br>
+            Razão Social: <input type="text" name="razaoSocial"><br>
+            CNPJ: <input type="text" name="cnpj"><br>
+            Email: <input type="text" name="email"><br>
+            Telefone: <input type="text" name="telefone"><br>
+            Endereço: <input type="text" name="endereco"><br>
+            <input type="submit" name="enviar" value="Cadastrar">
+        </form>
+
 
         <%@include file="WEB-INF/jspf/footer.jspf" %>
     </body>

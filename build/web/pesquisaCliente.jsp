@@ -16,9 +16,20 @@
         <h1>Pesquisar Cliente</h1>
         <%@include file="WEB-INF/jspf/menu.jspf" %>
         <br>
-
-        <h1>Hello World!</h1>
-
+        
+        <table border="1" style="width: 100%">
+            <tr>
+                <td>#ID</td>
+                <td>Nome</td>
+                <td>CPF</td>
+                <td>Email</td>
+                <td>Telefone</td>
+                <td>Endereço</td>
+                <td>Editar</td>
+                <td>Excluir</td>
+            </tr>
+        </table>
+     
         <%@include file="WEB-INF/jspf/footer.jspf" %>
     </body>
 </html>

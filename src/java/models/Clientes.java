@@ -65,7 +65,8 @@ public class Clientes implements Manageble {
 
     @Override
     public void Create(Object data) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Clientes c = (Clientes) data;
+        DataBase.getClientes().add(c);
     }
 
     @Override
@@ -75,7 +76,15 @@ public class Clientes implements Manageble {
 
     @Override
     public void Update(Object obj, Object data) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int i = Integer.parseInt("index");
+        Clientes c = new Clientes();
+        c.setNome("nome");
+        c.setCpf("cpf");
+        c.setRg("rg");
+        c.setEmail("email");
+        c.setTelefone("telefone");
+        c.setEndereco("endereco");
+        DataBase.getClientes().set(i, c);
     }
 
     @Override

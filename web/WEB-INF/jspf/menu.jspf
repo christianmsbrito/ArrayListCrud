@@ -4,6 +4,6 @@
 <a href="home.jsp">Home</a> ||
 <a href="formularioCliente.jsp">Cadastrar Cliente</a> ||
 <a href="formularioFornecedor.jsp">Cadastrar Fornecedor</a> ||
-<a href="pesquisaCliente.jsp">Pesquisar Cliente</a> ||
-<a href="pesquisaFornecedor.jsp">Pesquisar Fornecedor</a> ||
+<a href="listarClientes.jsp">Listar Cliente</a> ||
+<a href="listarFornecedores.jsp">Listar Fornecedor</a> ||
 <hr/>

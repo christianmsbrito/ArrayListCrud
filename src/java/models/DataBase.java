@@ -20,6 +20,14 @@ public class DataBase {
         if (cliente == null) {
             cliente = new ArrayList<>();
             Clientes c1 = new Clientes();
+            c1.setNome("Marcelo");
+            c1.setCpf("412.652.147-30");
+            c1.setRg("14.123.369-2");
+            c1.setEmail("marcelin@gmail.com");
+            c1.setTelefone("+55 (13) 97845-1247");
+            c1.setEndereco("Av. Logo Ali, 147, SP");
+
+            cliente.add(c1);
         }
         return cliente;
     }

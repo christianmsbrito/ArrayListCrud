@@ -13,7 +13,7 @@
     </head>
     <body>
         <%@include file="WEB-INF/jspf/header.jspf" %>
-        <h1>Pesquisar Fornecedor</h1>
+        <h1>Listar Fornecedor</h1>
         <%@include file="WEB-INF/jspf/menu.jspf" %>
         <br>
 

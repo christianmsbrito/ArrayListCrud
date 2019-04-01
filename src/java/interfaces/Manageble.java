@@ -5,6 +5,9 @@
  */
 package interfaces;
 
+import java.io.InvalidClassException;
+import models.DataBase;
+
 /**
  *
  * @author Christian
@@ -13,5 +16,5 @@ public interface Manageble {
     abstract void Create(Object data);
     abstract Object Read();
     abstract void Update(Object obj, Object data);
-    abstract void Delete(Object query);
+    abstract boolean Delete() throws InvalidClassException;
 }

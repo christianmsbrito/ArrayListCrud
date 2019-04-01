@@ -32,7 +32,7 @@
                 <td>Excluir</td>
             </tr>
             <% for (Fornecedores fornecedor : DataBase.getFornecedores()) {
-               int id = DataBase.getClientes().indexOf(fornecedor);%>
+                int id = DataBase.getFornecedores().indexOf(fornecedor);%>
             <tr>
                 <td><%=id %></td>
                 <td><%=fornecedor.getNome()%></td>
@@ -41,11 +41,23 @@
                 <td><%=fornecedor.getEmail()%></td>
                 <td><%=fornecedor.getTelefone()%></td>
                 <td><%=fornecedor.getEndereco()%></td>
-                <td><a href="alterar.jsp?id=<%=id%>">Alterar</a></td>
-                <td><a href="excluir.jsp?id=<%=id%>">Remover</a></td>
+                <td><a href="update?id=<%=id%>">Alterar</a></td>
+                <td><a href="listarFornecedores.jsp?action=remove&id=<%=id%>">Remover</a></td>
             </tr>
             <%}%>
         </table>
+        
+        <%
+            if(request.getParameter("action") != null && DataBase.getFornecedores().size() > 0) {
+                String action = request.getParameter("action");
+                switch(action) {
+                    case "remove": 
+                        Fornecedores fornecedor = DataBase.getFornecedorById(Integer.parseInt(request.getParameter("id")));
+                        fornecedor.Delete();
+//                        response.sendRedirect(request.getRequestURI());
+                }
+            }
+        %>
 
         <%@include file="WEB-INF/jspf/footer.jspf" %>
     </body>

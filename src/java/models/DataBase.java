@@ -49,4 +49,13 @@ public class DataBase {
         return fornecedor;
     }
 
+    public static Clientes getClienteById(int id) {
+        Clientes cliente = DataBase.getClientes().get(id);
+        return cliente;
+    }
+    
+    public static Fornecedores getFornecedorById(int id) {
+        Fornecedores fornecedor = DataBase.getFornecedores().get(id);
+        return fornecedor;
+    }
 }

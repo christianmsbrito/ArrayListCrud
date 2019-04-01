@@ -6,6 +6,7 @@
 package models;
 
 import interfaces.Manageble;
+import java.io.InvalidClassException;
 
 /**
  *
@@ -87,8 +88,14 @@ public class Clientes implements Manageble {
         DataBase.getClientes().set(i, c);
     }
 
+    /**
+     *
+     * @param cliente
+     * @return boolean
+     * @throws InvalidClassException
+     */
     @Override
-    public void Delete(Object query) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public boolean Delete() throws InvalidClassException{
+        return false;
     }
 }

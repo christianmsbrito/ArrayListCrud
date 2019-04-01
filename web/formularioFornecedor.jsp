@@ -3,8 +3,24 @@
     Created on : 29/03/2019, 15:14:32
     Author     : vsreis
 --%>
-
+<%@page import="models.Fornecedores"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+<%
+    if (request.getParameter("adicionar") != null) {
+        Fornecedores fornecedor = new Fornecedores();
+        fornecedor.setNome(request.getParameter("nome"));
+        fornecedor.setRazaoSocial(request.getParameter("razaoSocial"));
+        fornecedor.setCnpj(request.getParameter("cnpj"));
+        fornecedor.setEmail(request.getParameter("email"));
+        fornecedor.setTelefone(request.getParameter("telefone"));
+        fornecedor.setEndereco(request.getParameter("endereco"));
+        fornecedor.Create(fornecedor);
+
+        response.sendRedirect(request.getRequestURI());
+    }
+%>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -24,7 +40,7 @@
             Email: <input type="text" name="email"><br>
             Telefone: <input type="text" name="telefone"><br>
             Endereço: <input type="text" name="endereco"><br>
-            <input type="submit" name="enviar" value="Cadastrar">
+            <input type="submit" name="adicionar" value="adicionar">
         </form>
 
 

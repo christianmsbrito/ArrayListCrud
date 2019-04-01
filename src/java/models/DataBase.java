@@ -36,7 +36,14 @@ public class DataBase {
         if (fornecedor == null) {
             fornecedor = new ArrayList<>();
             Fornecedores f1 = new Fornecedores();
-
+            f1.setNome("TESTE");
+            f1.setCnpj("TESTES");
+            f1.setRazaoSocial("TESTE");
+            f1.setEmail("TESTE");
+            f1.setTelefone("TESTE");
+            f1.setEndereco("TESTE");
+            
+            fornecedor.add(f1);
         }
 
         return fornecedor;

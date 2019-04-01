@@ -41,7 +41,7 @@
                 <td><%=fornecedor.getEmail()%></td>
                 <td><%=fornecedor.getTelefone()%></td>
                 <td><%=fornecedor.getEndereco()%></td>
-                <td><a href="update?id=<%=id%>">Alterar</a></td>
+                <td><a href="formularioFornecedor.jsp?id=<%=id%>">Alterar</a></td>
                 <td><a href="listarFornecedores.jsp?action=remove&id=<%=id%>">Remover</a></td>
             </tr>
             <%}%>
@@ -54,7 +54,7 @@
                     case "remove": 
                         Fornecedores fornecedor = DataBase.getFornecedorById(Integer.parseInt(request.getParameter("id")));
                         fornecedor.Delete();
-//                        response.sendRedirect(request.getRequestURI());
+                        response.sendRedirect(request.getRequestURI());
                 }
             }
         %>

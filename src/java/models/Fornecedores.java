@@ -77,7 +77,8 @@ public class Fornecedores implements Manageble {
 
     @Override
     public void Update(Object obj, Object data) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       Fornecedores fornecedor = (Fornecedores) obj;
+       DataBase.getFornecedores().set((Integer) data, fornecedor);
     }
 
     @Override

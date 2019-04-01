@@ -77,15 +77,8 @@ public class Clientes implements Manageble {
 
     @Override
     public void Update(Object obj, Object data) {
-        int i = Integer.parseInt("index");
-        Clientes c = new Clientes();
-        c.setNome("nome");
-        c.setCpf("cpf");
-        c.setRg("rg");
-        c.setEmail("email");
-        c.setTelefone("telefone");
-        c.setEndereco("endereco");
-        DataBase.getClientes().set(i, c);
+       Clientes cliente = (Clientes) obj;
+       DataBase.getClientes().set((Integer) data, cliente);
     }
 
     /**

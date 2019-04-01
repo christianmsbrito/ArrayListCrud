@@ -15,6 +15,6 @@ import models.DataBase;
 public interface Manageble {
     abstract void Create(Object data);
     abstract Object Read();
-    abstract void Update(Object obj, Object data);
+    abstract void Update(Object obj, Object id);
     abstract boolean Delete() throws InvalidClassException;
 }

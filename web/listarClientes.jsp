@@ -41,7 +41,7 @@
                 <td><%=c.getEmail()%></td>
                 <td><%=c.getTelefone()%></td>
                 <td><%=c.getEndereco()%></td>
-                <td><a href="alterar.jsp?id=<%=id%>">Alterar</a></td>
+                <td><a href="formularioCliente.jsp?id=<%=id%>">Alterar</a></td>
                 <td><a href="excluir.jsp?id=<%=id%>">Remover</a></td>
             </tr>
             <%}%>

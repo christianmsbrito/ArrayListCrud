@@ -8,6 +8,17 @@
 <%@page import="models.Clientes"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
+
+<%
+    Clientes cliente = new Clientes();
+    int id = 0;
+
+    if (request.getParameter("id") != null) {
+        id = Integer.parseInt(request.getParameter("id"));
+        cliente = DataBase.getClienteById(id);
+    }
+%>
+
 <%
     if (request.getParameter("adicionar") != null) {
         Clientes c = new Clientes();
@@ -20,6 +31,19 @@
         c.Create(c);
 
         response.sendRedirect(request.getRequestURI());
+    }
+%>
+
+<%
+    if (request.getParameter("alterar") != null) {
+        cliente.setNome(request.getParameter("nome"));
+        cliente.setCpf(request.getParameter("cpf"));
+        cliente.setRg(request.getParameter("rg"));
+        cliente.setEmail(request.getParameter("email"));
+        cliente.setTelefone(request.getParameter("telefone"));
+        cliente.setEndereco(request.getParameter("endereco"));
+        cliente.Update(cliente, id);
+        response.sendRedirect("listarClientes.jsp");
     }
 %>
 
@@ -36,13 +60,16 @@
         <br>
 
         <form>
-            Nome: <input type="text" name="nome">
-            CPF: <input type="text" name="cpf">
-            RG: <input type="text" name="rg">
-            Email: <input type="text" name="email">
-            Telefone: <input type="text" name="telefone">
-            Endereço: <input type="text" name="endereco">
+            Nome: <input type="text" name="nome" value="<%= cliente.getNome()%>">
+            CPF: <input type="text" name="cpf" value="<%= cliente.getCpf()%>">
+            RG: <input type="text" name="rg" value="<%= cliente.getRg()%>">
+            Email: <input type="text" name="email" value="<%= cliente.getEmail()%>">
+            Telefone: <input type="text" name="telefone" value="<%= cliente.getTelefone()%>">
+            Endereço: <input type="text" name="endereco" value="<%= cliente.getEndereco()%>">
             <input type="submit" name="adicionar" value="Cadastrar">
+            <input type="submit" name="alterar" value="Alterar">
+            <input type="hidden" name="id" value="<%= id %>">
+            
         </form>
 
         <%@include file="WEB-INF/jspf/footer.jspf" %>

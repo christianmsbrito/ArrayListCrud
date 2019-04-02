@@ -43,13 +43,12 @@
         cliente.setTelefone(request.getParameter("telefone"));
         cliente.setEndereco(request.getParameter("endereco"));
         cliente.Update(cliente, id);
-        response.sendRedirect("listarClientes.jsp");
     }
 %>
         <%@include file="WEB-INF/jspf/header.jspf" %>
     <body>
-        <%@include file="WEB-INF/jspf/menu.jspf" %>
         <h1>Formulário Cliente</h1>
+        <%@include file="WEB-INF/jspf/menu.jspf" %>
         <br>
 
         <form>
@@ -59,12 +58,11 @@
             Email: <input type="text" name="email" value="<%= cliente.getEmail()%>">
             Telefone: <input type="text" name="telefone" value="<%= cliente.getTelefone()%>">
             Endereço: <input type="text" name="endereco" value="<%= cliente.getEndereco()%>">
-            <%if(request.getParameter("id") != null){%>
+            <%if(request.getParameter("id") == null){%>
                 <input type="submit" name="adicionar" value="Cadastrar">
             <%} else {%>
                 <input type="submit" name="alterar" value="Alterar" id="alt">
             <%}%>
-            <input type="hidden" name="id" value="<%= id %>">
         </form>
 
         <%@include file="WEB-INF/jspf/footer.jspf" %>

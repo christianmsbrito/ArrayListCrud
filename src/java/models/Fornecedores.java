@@ -16,6 +16,17 @@ public class Fornecedores implements Manageble {
 
     private String nome, razaoSocial, cnpj, email, telefone, endereco;
 
+    public Fornecedores() {
+        this.nome = "";
+        this.razaoSocial = "";
+        this.cnpj = "";
+        this.email = "";
+        this.telefone = "";
+        this.endereco = "";
+    }
+
+    
+    
     public String getNome() {
         return nome;
     }

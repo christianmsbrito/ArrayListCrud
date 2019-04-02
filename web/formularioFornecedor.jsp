@@ -40,7 +40,7 @@
         fornecedor.setTelefone(request.getParameter("telefone"));
         fornecedor.setEndereco(request.getParameter("endereco"));
         fornecedor.Update(fornecedor, id);
-        response.sendRedirect("listaFornecedores.jsp");
+        response.sendRedirect("listarFornecedores.jsp");
     }
 %>
 <%@include file="WEB-INF/jspf/header.jspf" %>
@@ -57,8 +57,11 @@
             Email: <input type="text" name="email" value="<%= fornecedor.getEmail()%>"><br>
             Telefone: <input type="text" name="telefone" value="<%= fornecedor.getTelefone()%>"><br>
             Endereço: <input type="text" name="endereco" value="<%= fornecedor.getEndereco()%>"><br>
-            <input type="submit" name="adicionar" value="adicionar">
-            <input type="submit" name="alterar" value="alterar">
+            <%if(request.getParameter("id") == null){%>
+            <input type="submit" name="adicionar" value="Cadastrar">
+            <%} else {%>
+            <input type="submit" name="alterar" value="Alterar">
+            <%}%>           
         </form>
 
 

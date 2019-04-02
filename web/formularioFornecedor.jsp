@@ -53,17 +53,17 @@
 
     <form><div class="row col-8 ml-auto mr-auto">
             <span>Nome</span>
-            <input class="col-12 form-control" type="text" name="nome" value="<%= fornecedor.getNome()%>">
+            <input class="col-12 form-control" type="text" name="nome" value="<%= fornecedor.getNome()%>" required>
             <span>Razão Social</span>
-            <input class="col-12 form-control" type="text" name="razaoSocial" value="<%= fornecedor.getRazaoSocial()%>">
+            <input class="col-12 form-control" type="text" name="razaoSocial" value="<%= fornecedor.getRazaoSocial()%>" required>
             <span>CNPJ</span>
-            <input class="col-12 form-control" type="text" name="cnpj" value="<%= fornecedor.getCnpj()%>">
+            <input class="col-12 form-control" type="text" name="cnpj" value="<%= fornecedor.getCnpj()%>" required>
             <span>Email</span>
-            <input class="col-12 form-control" type="text" name="email" value="<%= fornecedor.getEmail()%>">
+            <input class="col-12 form-control" type="email" name="email" value="<%= fornecedor.getEmail()%>" required>
             <span>Telefone</span>
-            <input class="col-12 form-control" type="text" name="telefone" value="<%= fornecedor.getTelefone()%>">
+            <input class="col-12 form-control" type="text" name="telefone" value="<%= fornecedor.getTelefone()%>" required>
             <span>Endereço</span>
-            <input class="col-12 form-control" type="text" name="endereco" value="<%= fornecedor.getEndereco()%>">
+            <input class="col-12 form-control" type="text" name="endereco" value="<%= fornecedor.getEndereco()%>" required>
             <%if (request.getParameter("id") == null) {%>
             <input class=" mt-3 btn btn-outline-primary ml-auto mr-auto" type="submit" name="adicionar" value="Cadastrar">
             <%} else {%>

@@ -12,34 +12,36 @@
 <h1>Listar Fornecedor</h1>
 <%@include file="WEB-INF/jspf/menu.jspf" %>
 <br>
-
-<table border="1" style="width: 100%">
-    <tr>
-        <td>#ID</td>
-        <td>Nome</td>
-        <td>Razão Social</td>
-        <td>CNPJ</td>
-        <td>Email</td>
-        <td>Telefone</td>
-        <td>Endereço</td>
-        <td>Editar</td>
-        <td>Excluir</td>
-    </tr>
-    <% for (Fornecedores fornecedor : DataBase.getFornecedores()) {
+<div class="row col-10 ml-auto mr-auto text-left">
+    <div class="col-2">Nome</div>
+    <div class="col-2">Razão Social</div>
+    <div class="col-2">CNPJ</div>
+    <div class="col-2">Email</div>
+    <div class="col-2">Telefone</div>
+    <div class="col-2">Endereço</div>
+</div>
+<% for (Fornecedores fornecedor : DataBase.getFornecedores()) {
             int id = DataBase.getFornecedores().indexOf(fornecedor);%>
-    <tr>
-        <td><%=id%></td>
-        <td><%=fornecedor.getNome()%></td>
-        <td><%=fornecedor.getRazaoSocial()%></td>
-        <td><%=fornecedor.getCnpj()%></td>
-        <td><%=fornecedor.getEmail()%></td>
-        <td><%=fornecedor.getTelefone()%></td>
-        <td><%=fornecedor.getEndereco()%></td>
-        <td><a href="formularioFornecedor.jsp?id=<%=id%>">Alterar</a></td>
-        <td><a href="listarFornecedores.jsp?action=remove&id=<%=id%>">Remover</a></td>
-    </tr>
-    <%}%>
-</table>
+<div class="row col-10 ml-auto mr-auto mt-1 text-left">
+    <div class="col-1 text-truncate"><%=fornecedor.getNome()%></div>
+    <div class="col-2 text-truncate"><%=fornecedor.getRazaoSocial()%></div>
+    <div class="col-2 text-truncate"><%=fornecedor.getCnpj()%></div>
+    <div class="col-2 text-truncate"><%=fornecedor.getEmail()%></div>
+    <div class="col-2 text-truncate"><%=fornecedor.getTelefone()%></div>
+    <div class="col-2 text-truncate"><%=fornecedor.getEndereco()%></div>
+    <span class="ml-2">
+        <a href="formularioCliente.jsp?id=<%=id%>">
+            <i class="fas fa-edit"></i>
+        </a>
+    </span>
+    <span class="ml-2">
+        <a href="listarFornecedores.jsp?action=remove&id=<%=id%>">
+            <i class="fas fa-trash"></i>
+        </a>
+    </span>
+</div>
+
+<%}%>
 
 <%
     if (request.getParameter("action") != null && DataBase.getFornecedores().size() > 0) {

@@ -54,17 +54,17 @@
     <form>
         <div class="row col-8 ml-auto mr-auto">
             <span>Nome</span>
-            <input class="col-12 form-control" type="text" name="nome" value="<%= cliente.getNome()%>">
+            <input class="col-12 form-control" type="text" name="nome" value="<%= cliente.getNome()%>" required>
             <span>CPF</span>
-            <input class="col-12 form-control" type="text" name="cpf" value="<%= cliente.getCpf()%>">
+            <input class="col-12 form-control" type="text" name="cpf" value="<%= cliente.getCpf()%>" required>
             <span>RG</span>
-            <input class="col-12 form-control" type="text" name="rg" value="<%= cliente.getRg()%>">
+            <input class="col-12 form-control" type="text" name="rg" value="<%= cliente.getRg()%>" required>
             <span>Email</span>
-            <input class="col-12 form-control" type="text" name="email" value="<%= cliente.getEmail()%>">
+            <input class="col-12 form-control" type="email" name="email" value="<%= cliente.getEmail()%>" required>
             <span>Telefone</span>
-            <input class="col-12 form-control" type="text" name="telefone" value="<%= cliente.getTelefone()%>">
+            <input class="col-12 form-control" type="text" name="telefone" value="<%= cliente.getTelefone()%>" required>
             <span>Endereço</span>
-            <input class="col-12 form-control" type="text" name="endereco" value="<%= cliente.getEndereco()%>">
+            <input class="col-12 form-control" type="text" name="endereco" value="<%= cliente.getEndereco()%>" required>
             <%if (request.getParameter("id") == null) {%>
             <input class=" mt-3 btn btn-outline-primary ml-auto mr-auto" type="submit" name="adicionar" value="Cadastrar">
             <%} else {%>

@@ -35,14 +35,14 @@
         </a>
     </span>
     <span class="ml-2">
-        <a href="excluir.jsp?id=<%=id%>">
+        <a href="listarClientes.jsp?action=remove&id=<%=id%>">
             <i class="fas fa-trash"></i>
         </a>
     </span>
 </div>
 <%}%>
 <%
-    if (request.getParameter("action") != null && DataBase.getFornecedores().size() > 0) {
+    if (request.getParameter("action") != null && DataBase.getClientes().size() > 0) {
         String action = request.getParameter("action");
         switch (action) {
             case "remove":
@@ -52,34 +52,6 @@
         }
     }
 %>
-
-<table border="1" style="width: 100%">
-    <tr>
-        <td>#ID</td>
-        <td>Nome</td>
-        <td>CPF</td>
-        <td>RG</td>
-        <td>Email</td>
-        <td>Telefone</td>
-        <td>Endereço</td>
-        <td>Editar</td>
-        <td>Excluir</td>
-    </tr>
-    <% for (Clientes c : DataBase.getClientes()) {
-                    int id = DataBase.getClientes().indexOf(c);%>
-    <tr>
-        <td><%=id%></td>
-        <td><%=c.getNome()%></td>
-        <td><%=c.getCpf()%></td>
-        <td><%=c.getRg()%></td>
-        <td><%=c.getEmail()%></td>
-        <td><%=c.getTelefone()%></td>
-        <td><%=c.getEndereco()%></td>
-        <td><a href="formularioCliente.jsp?id=<%=id%>">Alterar</a></td>
-        <td><a href="excluir.jsp?id=<%=id%>">Remover</a></td>
-    </tr>
-    <%}%>
-</table>
 
 <%@include file="WEB-INF/jspf/footer.jspf" %>
 </body>

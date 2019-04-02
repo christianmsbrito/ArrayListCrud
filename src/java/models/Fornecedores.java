@@ -6,7 +6,6 @@
 package models;
 
 import interfaces.Manageble;
-import java.io.InvalidClassException;
 
 /**
  *
@@ -25,8 +24,6 @@ public class Fornecedores implements Manageble {
         this.endereco = "";
     }
 
-    
-    
     public String getNome() {
         return nome;
     }

@@ -13,7 +13,7 @@ import java.io.InvalidClassException;
  * @author Christian
  */
 public class Clientes implements Manageble {
-    
+
     public Clientes() {
         this.nome = "";
         this.cpf = "";
@@ -86,8 +86,8 @@ public class Clientes implements Manageble {
 
     @Override
     public void Update(Object obj, Object data) {
-       Clientes cliente = (Clientes) obj;
-       DataBase.getClientes().set((Integer) data, cliente);
+        Clientes cliente = (Clientes) obj;
+        DataBase.getClientes().set((Integer) data, cliente);
     }
 
     /**
@@ -95,7 +95,7 @@ public class Clientes implements Manageble {
      * @return boolean
      */
     @Override
-    public boolean Delete(){
-        return false;
+    public boolean Delete() {
+        return DataBase.getClientes().remove(this);
     }
 }

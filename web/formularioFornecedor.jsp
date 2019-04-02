@@ -46,15 +46,14 @@
     }
 %>
 <%@include file="WEB-INF/jspf/header.jspf" %>
-<%@include file="WEB-INF/jspf/header.jspf" %>
 <body>
     <h1>Formulario Fornecedor</h1>
     <%@include file="WEB-INF/jspf/menu.jspf" %>
     <br>
 
-        <form><div class="row col-8 ml-auto mr-auto">
+    <form><div class="row col-8 ml-auto mr-auto">
             <span>Nome</span>
-            <input class="col-12 form-control" type="text" name="nome" value="<%= fornecedor.getNome() %>">
+            <input class="col-12 form-control" type="text" name="nome" value="<%= fornecedor.getNome()%>">
             <span>Razão Social</span>
             <input class="col-12 form-control" type="text" name="razaoSocial" value="<%= fornecedor.getRazaoSocial()%>">
             <span>CNPJ</span>
@@ -65,28 +64,14 @@
             <input class="col-12 form-control" type="text" name="telefone" value="<%= fornecedor.getTelefone()%>">
             <span>Endereço</span>
             <input class="col-12 form-control" type="text" name="endereco" value="<%= fornecedor.getEndereco()%>">
-            <%if(request.getParameter("id") == null){%>
-                <input class=" mt-3 btn btn-outline-primary ml-auto mr-auto" type="submit" name="adicionar" value="Cadastrar">
+            <%if (request.getParameter("id") == null) {%>
+            <input class=" mt-3 btn btn-outline-primary ml-auto mr-auto" type="submit" name="adicionar" value="Cadastrar">
             <%} else {%>
-                <input type="submit" class="mt-3 btn btn-outline-primary ml-auto mr-auto" name="alterar" value="Alterar" id="alt">
-            <%}%>    
-            </div>      
-        </form>
-    <form>
-        Nome: <input type="text" name="nome" value="<%= fornecedor.getNome()%>"> <br>
-        Razão Social: <input type="text" name="razaoSocial" value="<%= fornecedor.getRazaoSocial()%>"><br>
-        CNPJ: <input type="text" name="cnpj" value="<%= fornecedor.getCnpj()%>"><br>
-        Email: <input type="text" name="email" value="<%= fornecedor.getEmail()%>"><br>
-        Telefone: <input type="text" name="telefone" value="<%= fornecedor.getTelefone()%>"><br>
-        Endereço: <input type="text" name="endereco" value="<%= fornecedor.getEndereco()%>"><br>
-        <%if (request.getParameter("id") == null) {%>
-        <input type="submit" name="adicionar" value="Cadastrar">
-        <%} else {%>
-        <input type="submit" name="alterar" value="Alterar">
-        <%}%>
-        <input type="hidden" name="id" value="<%= id%>"/>
+            <input type="submit" class="mt-3 btn btn-outline-primary ml-auto mr-auto" name="alterar" value="Alterar" id="alt">
+            <%}%>            
+            <input type="hidden" name="id" value="<%= id%>"/>
+        </div>      
     </form>
-
 
     <%@include file="WEB-INF/jspf/footer.jspf" %>
 </body>

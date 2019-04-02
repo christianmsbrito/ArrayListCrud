@@ -7,18 +7,11 @@
 <%@page import="models.DataBase"%>
 <%@page import="models.Clientes"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <%@include file="WEB-INF/jspf/header.jspf" %>
+<%@include file="WEB-INF/jspf/header.jspf" %>
         <h1>Listar Cliente</h1>
         <%@include file="WEB-INF/jspf/menu.jspf" %>
         <br>
-
+        
         <table border="1" style="width: 100%">
             <tr>
                 <td>#ID</td>

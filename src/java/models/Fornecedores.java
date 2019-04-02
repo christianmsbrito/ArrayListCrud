@@ -66,8 +66,8 @@ public class Fornecedores implements Manageble {
 
     @Override
     public void Create(Object data) {
-       Fornecedores fornecedor = (Fornecedores) data;
-       DataBase.getFornecedores().add(fornecedor);
+        Fornecedores fornecedor = (Fornecedores) data;
+        DataBase.getFornecedores().add(fornecedor);
     }
 
     @Override
@@ -77,17 +77,13 @@ public class Fornecedores implements Manageble {
 
     @Override
     public void Update(Object obj, Object data) {
-       Fornecedores fornecedor = (Fornecedores) obj;
-       DataBase.getFornecedores().set((Integer) data, fornecedor);
+        Fornecedores fornecedor = (Fornecedores) obj;
+        DataBase.getFornecedores().set((Integer) data, fornecedor);
     }
 
     @Override
-    public boolean Delete() throws InvalidClassException{
-//        boolean isFornecedor = fornecedor.getClass().isInstance(this);;
-//        if(isFornecedor) {
-           return DataBase.getFornecedores().remove(this);
-//        }
-//        throw new InvalidClassException("Objeto fornecido não é do tipo fornecedor");
+    public boolean Delete() {
+        return DataBase.getFornecedores().remove(this);
     }
 
 }

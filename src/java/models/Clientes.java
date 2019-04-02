@@ -13,6 +13,15 @@ import java.io.InvalidClassException;
  * @author Christian
  */
 public class Clientes implements Manageble {
+    
+    public Clientes() {
+        this.nome = "";
+        this.cpf = "";
+        this.rg = "";
+        this.telefone = "";
+        this.endereco = "";
+        this.email = "";
+    }
 
     private String nome, cpf, rg, email, telefone, endereco;
 
@@ -83,12 +92,10 @@ public class Clientes implements Manageble {
 
     /**
      *
-     * @param cliente
      * @return boolean
-     * @throws InvalidClassException
      */
     @Override
-    public boolean Delete() throws InvalidClassException{
+    public boolean Delete(){
         return false;
     }
 }

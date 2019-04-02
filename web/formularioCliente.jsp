@@ -7,7 +7,7 @@
 <%@page import="models.DataBase"%>
 <%@page import="models.Clientes"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
+<%@include file="WEB-INF/jspf/header.jspf" %>
 
 <%
     Clientes cliente = new Clientes();
@@ -46,17 +46,10 @@
         response.sendRedirect("listarClientes.jsp");
     }
 %>
-
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
         <%@include file="WEB-INF/jspf/header.jspf" %>
-        <h1>Formulário Cliente</h1>
+    <body>
         <%@include file="WEB-INF/jspf/menu.jspf" %>
+        <h1>Formulário Cliente</h1>
         <br>
 
         <form>
@@ -66,10 +59,12 @@
             Email: <input type="text" name="email" value="<%= cliente.getEmail()%>">
             Telefone: <input type="text" name="telefone" value="<%= cliente.getTelefone()%>">
             Endereço: <input type="text" name="endereco" value="<%= cliente.getEndereco()%>">
-            <input type="submit" name="adicionar" value="Cadastrar">
-            <input type="submit" name="alterar" value="Alterar">
+            <%if(request.getParameter("id") != null){%>
+                <input type="submit" name="adicionar" value="Cadastrar">
+            <%} else {%>
+                <input type="submit" name="alterar" value="Alterar" id="alt">
+            <%}%>
             <input type="hidden" name="id" value="<%= id %>">
-            
         </form>
 
         <%@include file="WEB-INF/jspf/footer.jspf" %>

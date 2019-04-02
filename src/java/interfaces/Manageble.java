@@ -16,5 +16,5 @@ public interface Manageble {
     abstract void Create(Object data);
     abstract Object Read();
     abstract void Update(Object obj, Object id);
-    abstract boolean Delete() throws InvalidClassException;
+    abstract boolean Delete();
 }

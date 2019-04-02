@@ -11,7 +11,6 @@
 <h1>Listar Cliente</h1>
 <%@include file="WEB-INF/jspf/menu.jspf" %>
 <br>
-
 <div class="row col-10 ml-auto mr-auto text-left">
     <div class="col-2">Nome</div>
     <div class="col-2">CPF</div>
@@ -53,6 +52,36 @@
         }
     }
 %>
+
+<table border="1" style="width: 100%">
+    <tr>
+        <td>#ID</td>
+        <td>Nome</td>
+        <td>CPF</td>
+        <td>RG</td>
+        <td>Email</td>
+        <td>Telefone</td>
+        <td>Endereço</td>
+        <td>Editar</td>
+        <td>Excluir</td>
+    </tr>
+    <% for (Clientes c : DataBase.getClientes()) {
+                    int id = DataBase.getClientes().indexOf(c);%>
+    <tr>
+        <td><%=id%></td>
+        <td><%=c.getNome()%></td>
+        <td><%=c.getCpf()%></td>
+        <td><%=c.getRg()%></td>
+        <td><%=c.getEmail()%></td>
+        <td><%=c.getTelefone()%></td>
+        <td><%=c.getEndereco()%></td>
+        <td><a href="formularioCliente.jsp?id=<%=id%>">Alterar</a></td>
+        <td><a href="excluir.jsp?id=<%=id%>">Remover</a></td>
+    </tr>
+    <%}%>
+</table>
+
+>>>>>>> 62c352358d8323ba0eebf9fd545a7a4bb32fb6a0
 <%@include file="WEB-INF/jspf/footer.jspf" %>
 </body>
 </html>

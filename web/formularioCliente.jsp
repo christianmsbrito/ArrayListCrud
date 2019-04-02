@@ -45,6 +45,7 @@
         cliente.Update(cliente, id);
     }
 %>
+<<<<<<< HEAD
         <%@include file="WEB-INF/jspf/header.jspf" %>
     <body>
         <h1>Formulário Cliente</h1>
@@ -73,7 +74,29 @@
             </div>
             
         </form>
+=======
+<%@include file="WEB-INF/jspf/header.jspf" %>
+<body>
+    <h1>Formulário Cliente</h1>
+    <%@include file="WEB-INF/jspf/menu.jspf" %>
+    <br>
 
-        <%@include file="WEB-INF/jspf/footer.jspf" %>
-    </body>
+    <form>
+        Nome: <input type="text" name="nome" value="<%= cliente.getNome()%>">
+        CPF: <input type="text" name="cpf" value="<%= cliente.getCpf()%>">
+        RG: <input type="text" name="rg" value="<%= cliente.getRg()%>">
+        Email: <input type="text" name="email" value="<%= cliente.getEmail()%>">
+        Telefone: <input type="text" name="telefone" value="<%= cliente.getTelefone()%>">
+        Endereço: <input type="text" name="endereco" value="<%= cliente.getEndereco()%>">
+        <%if (request.getParameter("id") == null) {%>
+        <input type="submit" name="adicionar" value="Cadastrar">
+        <%} else {%>
+        <input type="submit" name="alterar" value="Alterar" id="alt">
+        <%}%>
+        <input type="hidden" name="id" value="<%= id%>"/>
+    </form>
+>>>>>>> 62c352358d8323ba0eebf9fd545a7a4bb32fb6a0
+
+    <%@include file="WEB-INF/jspf/footer.jspf" %>
+</body>
 </html>

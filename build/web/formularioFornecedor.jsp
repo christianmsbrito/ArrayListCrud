@@ -7,11 +7,11 @@
 <%@page import="models.Fornecedores"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
-<%  
+<%
     Fornecedores fornecedor = new Fornecedores();
     int id = 0;
-    
-    if (request.getParameter("id") != null ) {
+
+    if (request.getParameter("id") != null) {
         id = Integer.parseInt(request.getParameter("id"));
         fornecedor = DataBase.getFornecedorById(id);
     }
@@ -19,13 +19,15 @@
 
 <%
     if (request.getParameter("adicionar") != null) {
-        fornecedor.setNome(request.getParameter("nome"));
-        fornecedor.setRazaoSocial(request.getParameter("razaoSocial"));
-        fornecedor.setCnpj(request.getParameter("cnpj"));
-        fornecedor.setEmail(request.getParameter("email"));
-        fornecedor.setTelefone(request.getParameter("telefone"));
-        fornecedor.setEndereco(request.getParameter("endereco"));
-        fornecedor.Create(fornecedor);
+        Fornecedores f = new Fornecedores();
+
+        f.setNome(request.getParameter("nome"));
+        f.setRazaoSocial(request.getParameter("razaoSocial"));
+        f.setCnpj(request.getParameter("cnpj"));
+        f.setEmail(request.getParameter("email"));
+        f.setTelefone(request.getParameter("telefone"));
+        f.setEndereco(request.getParameter("endereco"));
+        f.Create(f);
 
         response.sendRedirect(request.getRequestURI());
     }
@@ -44,12 +46,13 @@
     }
 %>
 <%@include file="WEB-INF/jspf/header.jspf" %>
-        <%@include file="WEB-INF/jspf/header.jspf" %>
-    <body>
-        <h1>Formulario Fornecedor</h1>
-        <%@include file="WEB-INF/jspf/menu.jspf" %>
-        <br>
+<%@include file="WEB-INF/jspf/header.jspf" %>
+<body>
+    <h1>Formulario Fornecedor</h1>
+    <%@include file="WEB-INF/jspf/menu.jspf" %>
+    <br>
 
+<<<<<<< HEAD
         <form><div class="row col-8 ml-auto mr-auto">
             <span>Nome</span>
             <input class="col-12 form-control" type="text" name="nome" value="<%= fornecedor.getNome() %>">
@@ -70,8 +73,24 @@
             <%}%>    
             </div>      
         </form>
+=======
+    <form>
+        Nome: <input type="text" name="nome" value="<%= fornecedor.getNome()%>"> <br>
+        Razão Social: <input type="text" name="razaoSocial" value="<%= fornecedor.getRazaoSocial()%>"><br>
+        CNPJ: <input type="text" name="cnpj" value="<%= fornecedor.getCnpj()%>"><br>
+        Email: <input type="text" name="email" value="<%= fornecedor.getEmail()%>"><br>
+        Telefone: <input type="text" name="telefone" value="<%= fornecedor.getTelefone()%>"><br>
+        Endereço: <input type="text" name="endereco" value="<%= fornecedor.getEndereco()%>"><br>
+        <%if (request.getParameter("id") == null) {%>
+        <input type="submit" name="adicionar" value="Cadastrar">
+        <%} else {%>
+        <input type="submit" name="alterar" value="Alterar">
+        <%}%>
+        <input type="hidden" name="id" value="<%= id%>"/>
+    </form>
+>>>>>>> 62c352358d8323ba0eebf9fd545a7a4bb32fb6a0
 
 
-        <%@include file="WEB-INF/jspf/footer.jspf" %>
-    </body>
+    <%@include file="WEB-INF/jspf/footer.jspf" %>
+</body>
 </html>

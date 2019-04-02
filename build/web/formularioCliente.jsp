@@ -74,6 +74,6 @@
             
         </form>
 
-        <%@include file="WEB-INF/jspf/footer.jspf" %>
-    </body>
+    <%@include file="WEB-INF/jspf/footer.jspf" %>
+</body>
 </html>

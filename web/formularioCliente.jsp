@@ -45,6 +45,34 @@
         cliente.Update(cliente, id);
     }
 %>
+        <%@include file="WEB-INF/jspf/header.jspf" %>
+    <body>
+        <h1>Formulário Cliente</h1>
+        <%@include file="WEB-INF/jspf/menu.jspf" %>
+        <br>
+        
+        <form>
+            <div class="row col-8 ml-auto mr-auto">
+            <span>Nome</span>
+            <input class="col-12 form-control" type="text" name="nome" value="<%= cliente.getNome()%>">
+            <span>CPF</span>
+            <input class="col-12 form-control" type="text" name="cpf" value="<%= cliente.getCpf()%>">
+            <span>RG</span>
+            <input class="col-12 form-control" type="text" name="rg" value="<%= cliente.getRg()%>">
+            <span>Email</span>
+            <input class="col-12 form-control" type="text" name="email" value="<%= cliente.getEmail()%>">
+            <span>Telefone</span>
+            <input class="col-12 form-control" type="text" name="telefone" value="<%= cliente.getTelefone()%>">
+            <span>Endereço</span>
+            <input class="col-12 form-control" type="text" name="endereco" value="<%= cliente.getEndereco()%>">
+            <%if(request.getParameter("id") == null){%>
+                <input class=" mt-3 btn btn-outline-primary ml-auto mr-auto" type="submit" name="adicionar" value="Cadastrar">
+            <%} else {%>
+                <input type="submit" class="mt-3 btn btn-outline-primary ml-auto mr-auto" name="alterar" value="Alterar" id="alt">
+            <%}%>    
+            </div>
+            
+        </form>
 <%@include file="WEB-INF/jspf/header.jspf" %>
 <body>
     <h1>Formulário Cliente</h1>

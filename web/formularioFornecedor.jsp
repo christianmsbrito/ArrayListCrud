@@ -52,6 +52,26 @@
     <%@include file="WEB-INF/jspf/menu.jspf" %>
     <br>
 
+        <form><div class="row col-8 ml-auto mr-auto">
+            <span>Nome</span>
+            <input class="col-12 form-control" type="text" name="nome" value="<%= fornecedor.getNome() %>">
+            <span>Razão Social</span>
+            <input class="col-12 form-control" type="text" name="razaoSocial" value="<%= fornecedor.getRazaoSocial()%>">
+            <span>CNPJ</span>
+            <input class="col-12 form-control" type="text" name="cnpj" value="<%= fornecedor.getCnpj()%>">
+            <span>Email</span>
+            <input class="col-12 form-control" type="text" name="email" value="<%= fornecedor.getEmail()%>">
+            <span>Telefone</span>
+            <input class="col-12 form-control" type="text" name="telefone" value="<%= fornecedor.getTelefone()%>">
+            <span>Endereço</span>
+            <input class="col-12 form-control" type="text" name="endereco" value="<%= fornecedor.getEndereco()%>">
+            <%if(request.getParameter("id") == null){%>
+                <input class=" mt-3 btn btn-outline-primary ml-auto mr-auto" type="submit" name="adicionar" value="Cadastrar">
+            <%} else {%>
+                <input type="submit" class="mt-3 btn btn-outline-primary ml-auto mr-auto" name="alterar" value="Alterar" id="alt">
+            <%}%>    
+            </div>      
+        </form>
     <form>
         Nome: <input type="text" name="nome" value="<%= fornecedor.getNome()%>"> <br>
         Razão Social: <input type="text" name="razaoSocial" value="<%= fornecedor.getRazaoSocial()%>"><br>

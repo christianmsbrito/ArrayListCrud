@@ -6,7 +6,6 @@
 package models;
 
 import interfaces.Manageble;
-import java.io.InvalidClassException;
 
 /**
  *
@@ -90,10 +89,6 @@ public class Clientes implements Manageble {
         DataBase.getClientes().set((Integer) data, cliente);
     }
 
-    /**
-     *
-     * @return boolean
-     */
     @Override
     public boolean Delete() {
         return DataBase.getClientes().remove(this);

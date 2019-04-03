@@ -1,4 +1,4 @@
-<%-- 
+ooool<%-- 
     Document   : pesquisarFornecedor
     Created on : 29/03/2019, 15:15:10
     Author     : vsreis
@@ -21,7 +21,7 @@
     <div class="col-2">Endereço</div>
 </div>
 <% for (Fornecedores fornecedor : DataBase.getFornecedores()) {
-            int id = DataBase.getFornecedores().indexOf(fornecedor);%>
+        int id = DataBase.getFornecedores().indexOf(fornecedor);%>
 <div class="row col-10 ml-auto mr-auto mt-1 text-left">
     <div class="col-1 text-truncate"><%=fornecedor.getNome()%></div>
     <div class="col-2 text-truncate"><%=fornecedor.getRazaoSocial()%></div>
@@ -30,7 +30,7 @@
     <div class="col-2 text-truncate"><%=fornecedor.getTelefone()%></div>
     <div class="col-2 text-truncate"><%=fornecedor.getEndereco()%></div>
     <span class="ml-2">
-        <a href="formularioCliente.jsp?id=<%=id%>">
+        <a href="formularioFornecedor.jsp?id=<%=id%>">
             <i class="fas fa-edit"></i>
         </a>
     </span>

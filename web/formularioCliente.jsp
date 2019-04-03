@@ -43,6 +43,8 @@
         cliente.setTelefone(request.getParameter("telefone"));
         cliente.setEndereco(request.getParameter("endereco"));
         cliente.Update(cliente, id);
+
+        response.sendRedirect("listarClientes.jsp");
     }
 %>
 <%@include file="WEB-INF/jspf/header.jspf" %>

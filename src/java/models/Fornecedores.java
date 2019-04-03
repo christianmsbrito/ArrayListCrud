@@ -74,7 +74,7 @@ public class Fornecedores implements Manageble {
 
     @Override
     public void Create(Object data) {
-        Fornecedores fornecedor = (Fornecedores) data;
+        Fornecedores fornecedor = (Fornecedores) data; 
         DataBase.getFornecedores().add(fornecedor);
     }
 

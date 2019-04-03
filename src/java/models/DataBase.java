@@ -36,13 +36,13 @@ public class DataBase {
         if (fornecedor == null) {
             fornecedor = new ArrayList<>();
             Fornecedores f1 = new Fornecedores();
-            f1.setNome("TESTE");
-            f1.setCnpj("TESTES");
-            f1.setRazaoSocial("TESTE");
-            f1.setEmail("TESTE");
-            f1.setTelefone("TESTE");
-            f1.setEndereco("TESTE");
-            
+            f1.setNome("Jennifer Gabrielly");
+            f1.setCnpj("74.136.224/0001-61");
+            f1.setRazaoSocial("Vidros ME");
+            f1.setEmail("vendas@jenniferegabriellyvidrosme.com.br");
+            f1.setTelefone("+55 (16) 92719-8762");
+            f1.setEndereco("Rua Edgard Rodrigues 523, Ribeirânia, Ribeirão Preto");
+
             fornecedor.add(f1);
         }
 
@@ -53,7 +53,7 @@ public class DataBase {
         Clientes cliente = DataBase.getClientes().get(id);
         return cliente;
     }
-    
+
     public static Fornecedores getFornecedorById(int id) {
         Fornecedores fornecedor = DataBase.getFornecedores().get(id);
         return fornecedor;

@@ -47,7 +47,7 @@
 %>
 <%@include file="WEB-INF/jspf/header.jspf" %>
 <body>
-    <h1>Formulario Fornecedor</h1>
+    <h1>Formulário Fornecedor</h1>
     <%@include file="WEB-INF/jspf/menu.jspf" %>
     <br>
 

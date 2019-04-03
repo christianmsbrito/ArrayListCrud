@@ -5,14 +5,14 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-    <%@include file="WEB-INF/jspf/header.jspf" %>
-    <body>
-        <h1>Home</h1>
-        <%@include file="WEB-INF/jspf/menu.jspf" %>
-        <br>
+<%@include file="WEB-INF/jspf/header.jspf" %>
+<body>
+    <h1>Home</h1>
+    <%@include file="WEB-INF/jspf/menu.jspf" %>
+    <br>
 
-        <h1>Hello World!</h1>
+    <p class="ml-3">A seguinte aplicação é responsavel por cadastrar/listar clientes e fornecedores</p>
 
-        <%@include file="WEB-INF/jspf/footer.jspf" %>
-    </body>
+    <%@include file="WEB-INF/jspf/footer.jspf" %>
+</body>
 </html>

@@ -5,9 +5,6 @@
  */
 package interfaces;
 
-import java.io.InvalidClassException;
-import models.DataBase;
-
 /**
  *
  * @author Christian

@@ -1,7 +1,7 @@
 <%@ page pageEncoding="UTF-8" %>
 <nav class="navbar navbar-expand navbar-light bg-light">
     <div class="nav navbar-nav">
-        <a class="nav-item navbar-brand" href="home.jsp">HOME</a>
+        <a class="nav-item nav-link" href="home.jsp">Home</a>
         <a class="nav-item nav-link" href="formularioCliente.jsp">Cadastrar Cliente</a>
         <a class="nav-item nav-link" href="formularioFornecedor.jsp">Cadastrar Fornecedor</a>
         <a class="nav-item nav-link" href="listarClientes.jsp">Listar Cliente</a>
